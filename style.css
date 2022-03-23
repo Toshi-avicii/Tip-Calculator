@@ -1,0 +1,317 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space-mono', monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #c5e4e7;
+}
+
+.calc-container .logo-container {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calc-container .tip-calculator {
+    height: auto;
+    box-shadow: 0px 0px 50px #acacac;
+    border-radius: 16px;
+    padding: 1rem 1.6rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1.5rem;
+    background-color: white;
+}
+
+.tip-calculator .input-box {
+    padding: 10px;
+}
+
+.tip-calculator .input-box .bill-input-container {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    
+}
+
+.tip-calculator .input-box .bill-input-container p {
+    margin-bottom: 0.5rem;
+    color:hsl(0, 0%, 53%);
+}
+
+.tip-calculator .input-box .bill-input-container .bill-input-box {
+    background-color: #f3f8fb;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    align-items: center;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.tip-calculator .input-box .bill-input-container .bill-input-box input {
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    color: #00474b;
+    font-weight: 700;
+    outline: none;
+    padding-left: 1rem;
+    text-align: right;
+}
+
+.bill-btns-container .btn-heading {
+    margin-bottom: 0.5rem;
+    color:hsl(0, 0%, 53%);
+    font-weight: 700;
+}
+
+.bill-btns-container .bill-btns {
+    display: grid;
+    grid-template-rows: 2;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.bill-btns-container .bill-btns button {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    background-color: #00474b;
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.bill-btns-container .bill-btns button#custom-percent-btn {
+    background-color: #feffff;
+    color: #9db5b6;
+}
+
+.bill-btns-container .bill-btns button:hover {
+  background-color: #26c2ad;
+  color:hsl(183, 100%, 15%);
+  transition: 0.25s;
+}
+
+.bill-btns-container .bill-btns button#custom-percent-btn:hover {
+    background-color: #00474b;
+    transition: 0.25s;
+    color: lightgray;
+}
+
+.tip-calculator .tip-people-container .people p {
+    margin-bottom: 0.5rem;
+    color:hsl(0, 0%, 53%);
+    font-weight: 700;
+}
+
+.tip-calculator .tip-people-container .bill-people-box {
+    background-color: #f3f8fb;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    align-items: center;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.tip-calculator .tip-people-container .bill-people-box input {
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    color: #00474b;
+    font-weight: 700;
+    outline: none;
+    padding-left: 1rem;
+    text-align: right;
+}
+
+.output-box {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    min-height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.output-box .tip-amount-person-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.output-box .tip-amount-person-container .tip-text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.output-box .tip-amount-person-container .tip-text p {
+    font-weight: 700;
+}
+
+.output-box .tip-amount-person-container .tip-text p#per-person-tip-output {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #23c2ab;
+}
+
+.output-box .tip-total-amount-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.output-box .tip-total-amount-container .tip-text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.output-box .tip-total-amount-container .tip-text p {
+    font-weight: 700;
+}
+
+.output-box .tip-total-amount-container .tip-text p#total-tip-output {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #23c2ab;
+}
+
+.output-box .total-amount-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.output-box .total-amount-container .tip-text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.output-box .total-amount-container .tip-text p {
+    font-weight: 700;
+}
+
+.output-box .total-amount-container .tip-text p#total-bill-output {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #23c2ab;
+}
+
+.output-box .reset-btn-container {
+    align-self: flex-end;
+    padding: 0.8rem 1rem;
+}
+
+.output-box .reset-btn-container button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background-color: hsl(172, 67%, 45%);
+    color:hsl(183, 100%, 15%);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.output-box .reset-btn-container button:hover {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    box-shadow: 0px 0px 20px #313131;
+    transition: 0.25s;
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        height: auto;
+    }
+
+    .calc-container .logo-container {
+        margin-top: 2rem;
+    }
+
+    .calc-container .tip-calculator {
+        display: grid;
+        grid-template-rows: 2;
+        grid-template-columns: 100%;
+    }
+
+    .input-box {
+        margin-block-end: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .calc-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: auto;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .input-box {
+        margin-block-end: 1rem;
+    }
+
+    .calc-container .tip-calculator {
+        padding: 0.5rem;
+        width: 80%;
+        justify-self: center;
+        margin: auto;
+    }
+
+    .bill-btns-container .bill-btns button {
+        font-size: 0.95rem;
+    }
+
+    .output-box {
+        padding: 5px;
+    }
+
+    .output-box .tip-amount-person-container .tip-text p#per-person-tip-output {
+        font-size: 1.5rem;
+    }
+
+    .output-box .tip-total-amount-container .tip-text p#total-tip-output {
+        font-size: 1.5rem;
+    }
+
+    .output-box .total-amount-container .tip-text p {
+        font-size: 0.8rem;
+    }
+
+    .output-box .total-amount-container .tip-text p#total-bill-output {
+        font-size: 1.5rem;
+    }
+
+    .output-box .reset-btn-container button {
+        padding: 0.35rem;
+        font-size: 1rem;
+    }
+}

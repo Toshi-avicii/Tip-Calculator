@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <section class="calc-container">
+      <div class="logo-container">
+          <img src="img/logo.svg" alt="" width="100" height="50">
+      </div>
+
+      <div class="tip-calculator">
+          <div class="input-box">
+              <div class="bill-input-container">
+                  <p>Bill</p>
+                  <div class="bill-input-box">
+                      <img src="img/icon-dollar.svg" alt="" width="8" height="13">
+                      <input type="number" id="input-bill">
+                  </div>
+              </div>
+              <div class="bill-btns-container">
+                  <div class="btn-heading">
+                      <p>Select Tip %</p>
+                  </div>
+
+                  <div class="bill-btns">
+                      <button class="btn" id="five-percent-btn">5%</button>
+                      <button class="btn" id="ten-percent-btn">10%</button>
+                      <button class="btn" id="fifteen-percent-btn">15%</button>
+                      <button class="btn" id="twenty-five-percent-btn">25%</button>
+                      <button class="btn" id="fifty-percent-btn">50%</button>
+                      <button class="btn" id="custom-percent-btn">Custom</button>
+                  </div>
+              </div>
+
+              <div class="tip-people-container">
+                  <div class="people"><p>Number Of People</p></div>
+                  <div class="bill-people-box">
+                    <img src="img/icon-person.svg" alt="" width="10" height="13">
+                    <input type="number" id="input-people">
+                </div>
+              </div>
+          </div>
+          <div class="output-box">
+              <div class="tip-amount-person-container">
+                  <div class="tip-text">
+                      <div><p>Tip Amount</p> <p> / person</p></div>
+                      <p id="per-person-tip-output">$ 0</p>
+                  </div>
+              </div>
+
+              <div class="tip-total-amount-container">
+                <div class="tip-text">
+                    <div><p>Total</p><p>/ person</p></div>
+                    <p id="total-tip-output">$ 0</p>
+                </div>
+              </div>
+
+              <div class="total-amount-container">
+                <div class="tip-text">
+                    <div><p>Total Bill</p><p>/ Including Tip</p></div>
+                    <p id="total-bill-output">$ 0</p>
+                </div>
+              </div>
+
+              <div class="reset-btn-container">
+                <button id="reset-btn">Reset</button>
+              </div>
+          </div>
+      </div>
+  </section>
+  <script src="app.js"></script>
+</body>
+</html>
